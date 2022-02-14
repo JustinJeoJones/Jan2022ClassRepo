@@ -1,6 +1,6 @@
 ﻿using SquareExercise;
 
-Square square = new Square();
+//  square = new Square();
 
 Console.WriteLine("Please enter a side length");
 
@@ -13,6 +13,7 @@ while(!int.TryParse(Console.ReadLine(), out side))
 
 // int side = Int32.Parse(Console.ReadLine());
 
+Square square = new Square(side,"RED");
 square.SideLength = side;
 
 Console.WriteLine($"The perimeter of the square is {square.CalculatePerimeter()}");
