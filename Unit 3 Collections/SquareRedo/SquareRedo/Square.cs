@@ -8,7 +8,17 @@ namespace SquareExercise
 {
     internal class Square
     {
+     
         public int SideLength { get; set; }
+
+        public string Color { get; set; }
+
+        // Constructor
+        public Square(int length, string color)
+        {
+            SideLength = length;
+            Color = color;
+        }
 
         // Methods
 
