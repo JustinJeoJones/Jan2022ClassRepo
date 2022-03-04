@@ -1,0 +1,18 @@
+﻿@model List<Course>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h2>All courses</h2>
+@foreach(Course c in Model)
+{
+    <p>@c.CourseName @c.Description</p>
+}
+
+<form method="post" asp-action="SaveCourse">
+    name: <input type="text" name="CourseName" />
+    description: <input type="text" name="Description" />
+
+    <input type="submit" />
+</form>

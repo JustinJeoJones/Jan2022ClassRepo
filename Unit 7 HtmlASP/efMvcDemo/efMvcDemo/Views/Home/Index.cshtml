@@ -1,0 +1,26 @@
+﻿@model List<Student>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>All students</h2>
+
+@foreach(Student st in Model)
+{
+    <p>@st.StudentId : @st.FirstName</p>
+    <a asp-controller="Home" asp-action="StudentView" asp-route-id="@st.StudentId">More Details</a>
+}
+
+<h2>Add Student</h2>
+
+<form method="post" asp-action="SaveStudent">
+    First Name: <input type="text" name="FirstName" /><br />
+    Last Name: <input type="text" name="LastName" /><br />
+
+    <input type="submit" />
+</form>

@@ -1,0 +1,46 @@
+body {
+  margin: 0px;
+  font-family: "Kanit", sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  border-bottom: 2px solid black;
+  background-color: ghostwhite;
+}
+
+.footer {
+  /* Use this if you prefer it at the bottom */
+  /* position:fixed; */
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.condenseText {
+  width: 50%;
+  margin: auto;
+}
+.centerImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.nav {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .footer {
+    position: fixed;
+  }
+}

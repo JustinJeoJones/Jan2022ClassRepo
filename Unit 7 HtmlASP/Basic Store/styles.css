@@ -1,0 +1,17 @@
+html {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.item {
+  border: 5px solid black;
+  width: 50%;
+  height: 50%;
+  background-color: lightgray;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.imgSize {
+  width: 50%;
+}
