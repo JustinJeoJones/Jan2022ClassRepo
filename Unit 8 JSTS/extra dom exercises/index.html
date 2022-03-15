@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- https://docs.google.com/document/d/16_s3riwdqdpiOQFu6KDIYenTeWqNB9vB8j-DLSIM5Yo/edit -->
+    <!-- vending machine -->
+    <p>total $ <strong id="total">0.00</strong></p>
+    <button onclick="BuyItem(2.00)">Lime Cola 2.00</button>
+    <button onclick="BuyItem(3.00)">Salted Peanuts 3.00</button>
+    <button onclick="BuyItem(4.00)">Chocolate Bar 4.00</button>
+    <button onclick="BuyItem(6.00)">Fruit Gummies 6.00</button>
+    <!-- make money -->
+    <br />
+    How many?<input type="number" id="quantity" />
+    <br />
+    Which coin?<select id="coin">
+      <option value="Penny">Penny</option>
+      <option value="Nickel">Nickel</option>
+      <option value="Dime">Dime</option>
+      <option value="Quarter">Quarter</option>
+    </select>
+    <button onclick="MakeMoney()">Make Money!</button>
+    <div id="coinContainer"></div>
+    <!-- lightbulb -->
+    <div id="lightbulb">lightbulb</div>
+    <button id="on" onclick="TurnOn()">On</button>
+    <button id="off" onclick="TurnOff()">Off</button>
+    <button id="toggle" onclick="toggle()">Toggle</button>
+    <button id="end" onclick="disable()">End</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
