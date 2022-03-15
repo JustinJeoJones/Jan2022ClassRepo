@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="userOptions">
+      Please enter name<input type="text" id="name" />
+      <br />
+      Please choose a color for the background
+      <select id="color">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+      <br />
+      Please enter a message <input type="text" id="message" />
+      <br />
+      <button onclick="ChangeContent()">Submit values</button>
+    </div>
+
+    <div class="letter" style="border: 1px solid black">
+      <h1>Dear <strong id="nameResult">Justin</strong></h1>
+      <p id="messageResult">Insert Message here</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
