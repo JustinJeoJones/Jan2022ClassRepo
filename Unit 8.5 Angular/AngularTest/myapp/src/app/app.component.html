@@ -1,0 +1,33 @@
+<h1>Welcome to {{ title }}!</h1>
+
+<h2>My name is {{ name }}</h2>
+
+<p>There are {{ names.length }} people present.</p>
+
+<div *ngFor="let n of names; index as i">
+  <p>{{ i }} {{ n }}</p>
+  <button (click)="changeTitle(n)">Click me!</button>
+</div>
+
+<!-- Form -->
+<form #nameForm="ngForm" (ngSubmit)="addName(nameForm)">
+  Enter a name:<input name="inputName" ngModel />
+
+  <button>Add to names</button>
+</form>
+
+<p *ngIf="IsHungry == true">I AM HUNGRY</p>
+
+<div>
+  <h1>MY CAR IS A {{ myCar.make }} {{ myCar.model }}</h1>
+  <h2>The car came out in {{ myCar.year }}</h2>
+  <h2>The car cost ${{ myCar.price }}</h2>
+  <p *ngIf="myCar.isUsed == true">My car is used.</p>
+  <p *ngIf="myCar.isUsed != true">My car is new!</p>
+</div>
+
+<div *ngFor="let e of employees; index as i">
+  <p>{{ e.name }}</p>
+  <p>{{ e.salary }}</p>
+  <p *ngIf="e.isManager">MANAGER!</p>
+</div>

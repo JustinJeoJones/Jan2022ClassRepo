@@ -1,0 +1,28 @@
+<div class="menu">
+  <h1>Dinner</h1>
+  <div *ngFor="let item of getByCategory('Dinner')">
+    <p>{{ item.name }} | {{ item.category }} | {{ item.price }}</p>
+  </div>
+  <h1>Sides</h1>
+  <div *ngFor="let item of getByCategory('Sides')">
+    <p>{{ item.name }} | {{ item.category }} | {{ item.price }}</p>
+  </div>
+  <h1>Salad</h1>
+  <div *ngFor="let item of getByCategory('Salads')">
+    <p>{{ item.name }} | {{ item.category }} | {{ item.price }}</p>
+  </div>
+  <h1>Dessert</h1>
+  <div *ngFor="let item of getByCategory('Dessert')">
+    <p>{{ item.name }} | {{ item.category }} | {{ item.price }}</p>
+  </div>
+</div>
+
+<form class="form" #addForm="ngForm" (ngSubmit)="addItem(addForm)">
+  name:<input name="name" ngModel />
+  <br />
+  category:<input name="category" ngModel />
+  <br />
+  price:<input name="price" type="number" ngModel />
+  <br />
+  <button>Add Item</button>
+</form>

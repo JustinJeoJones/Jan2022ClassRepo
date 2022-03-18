@@ -1,0 +1,13 @@
+.menu {
+  text-align: center;
+  border: 1px black solid;
+}
+
+.form {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+input {
+  width: 100%;
+}
