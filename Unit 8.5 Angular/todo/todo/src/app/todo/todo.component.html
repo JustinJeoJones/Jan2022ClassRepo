@@ -1,0 +1,28 @@
+<input name="filter" #filter (input)="updateFilter(filter.value)" />
+
+<p *ngIf="congratulationsCheck() == true">
+  Congratulations on completing your tasks!
+</p>
+
+<div *ngFor="let task of filterTasks(); index as i">
+  <p>
+    {{ i }}.
+    <button (click)="completeTask(task)" *ngIf="task.completed == false">
+      Complete
+    </button>
+    <span [ngClass]="task.completed ? 'complete' : ''">{{ task.task }}</span>
+    <button (click)="removeTask(task)">x</button>
+  </p>
+
+  <form #editForm="ngForm" (ngSubmit)="editTodo(editForm, task)">
+    <input name="newTask" ngModel />
+    <button>Update Task</button>
+  </form>
+</div>
+
+<form #todoForm="ngForm" (ngSubmit)="addTodo(todoForm)">
+  <label for="Task">Enter a task!</label>
+  <input type="text" name="Task" id="Task" ngModel />
+
+  <button>Add todo</button>
+</form>
